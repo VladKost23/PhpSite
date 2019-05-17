@@ -6,53 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css"></link>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
-    <title>VladosK</title>
+    <title>Contact Us</title>
 </head>
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
-      <h5 class="my-0 mr-md-auto font-weight-normal text-white">VladosK</h5>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="index.php">Home</a>
-        <a class="p-2 text-white" href="contact.php">Contacts</a>
-      </nav>
-    <a class="btn btn-outline-primary" href="#">Log in</a>
+  <?php require "blocks/header.php" ?>
+  <div class="container mt-5">
+    <h3>Contact Us</h3>
+    <form action="check.php" method="post">
+      <input type="email" name="email" placeholder="Enter your e-mail" class="form-control"><br>
+      <textarea name="message" class="form-control" placeholder="Enter your message"></textarea><br>
+      <button class="btn btn-dark" type="submit" name="send">Send message</button>
+    </form>
   </div>
-  <footer class="container pt-4 my-md-5 pt-md-5 border-top">
-      <div class="row">
-        <div class="col-12 col-md">
-          <img class="mb-2" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-          <small class="d-block mb-3 text-muted">©2019</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Cool stuff</a></li>
-            <li><a class="text-muted" href="#">Random feature</a></li>
-            <li><a class="text-muted" href="#">Team feature</a></li>
-            <li><a class="text-muted" href="#">Stuff for developers</a></li>
-            <li><a class="text-muted" href="#">Another one</a></li>
-            <li><a class="text-muted" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Resource</a></li>
-            <li><a class="text-muted" href="#">Resource name</a></li>
-            <li><a class="text-muted" href="#">Another resource</a></li>
-            <li><a class="text-muted" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Team</a></li>
-            <li><a class="text-muted" href="#">Locations</a></li>
-            <li><a class="text-muted" href="#">Privacy</a></li>
-            <li><a class="text-muted" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+  <?php  require "blocks/footer.php" ?>
 </body>
 </html>
