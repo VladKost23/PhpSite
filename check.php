@@ -15,4 +15,11 @@ if($error != ''){
   echo $error;
   exit;
 }
+
+$subject = "=?utf-8?B?".base64_encode("Test")."?=";
+$headers ="From: $email\r\nReply to: $email\r\nContebt type: text/html;charset=utf-8\r\n";
+
+mail('kost443562@gmail.com', $subject, $message, $headers);
+
+header('Location: /contact.php');
  ?>
