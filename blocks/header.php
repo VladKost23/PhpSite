@@ -4,5 +4,11 @@
     <a class="p-2 text-white" href="index.php">Home</a>
     <a class="p-2 text-white" href="contact.php">Contacts</a>
   </nav>
-<a class="btn btn-light" href="#">Log in</a>
+  <?php
+    if($_COOKIE['user']=='true'):
+   ?>
+<a class="btn btn-light" href="/auth.php">User account</a>
+<?php else:?>
+<a class="btn btn-light" href="/auth.php">Log in</a>
+<?php endif; ?>
 </div>
